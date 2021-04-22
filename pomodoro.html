@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_pomodoro.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>Pomodoro</title>
+</head>
+
+
+<body>
+<!-- Haut de page  -->
+<header>
+    <div class="container text-center text-white" style="width: 70%; min-width: 300px;">
+    <h1 class="text-center text-white text-uppercase fw-light mt-5">Pomodoro Timer</h1>
+    <hr>
+    </div>
+</header>
+
+<!-- bloc de chronometre  -->
+<section>
+    <!-- Zone de tabs  -->
+    <div class="container text-center text-white rounded-3" id="block">
+        <ul class="nav nav-tabs pt-4" id='myTab' role='tablist'>
+            <li class="nav-item">
+                <button class = "nav-link active text-secondary" id="pomodoro-tab" data-bs-toggle='tab' data-bs-target="#timer" type='button' role='tab'>Pomodoro</button>
+            </li>
+            <li class="nav-item">
+                <button class = "nav-link text-secondary" id="pause-tab" data-bs-toggle='tab' data-bs-target="#pause" type='button' role='tab'>Pause</button>
+            </li>
+            <li class="nav-item">
+                <button class = "nav-link text-secondary" id="break-tab" data-bs-toggle='tab' data-bs-target="#break" type='button' role='tab'>Break</button>
+            </li>
+        </ul>
+
+        <!-- Contenu des tabs  -->
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="timer" role="tabpanel" aria-labelledby="nav-pomodoro-tab">
+                <div class="clock" id="work-clock">
+                    
+                </div>
+                <button type="button" class="btn btn-outline-light text-secondary mb-3" id="workStart">Start</button>
+            </div>
+            <div class="tab-pane fade show" id="pause" role="tabpanel" aria-labelledby="nav-pause-tab">
+                <div class="clock" id='pause-clock'>
+                    
+                </div>
+                <button type="button" class="btn btn-outline-light text-secondary mb-3" id="pauseStart">Start</button>
+            </div>
+            <div class="tab-pane fade show"  id="break" role="tabpanel" aria-labelledby="nav-pause-tab">
+                <div class="clock" id='break-clock'>
+                    
+                </div>
+                <button type="button" class="btn btn-outline-light text-secondary mb-3" id="breakStart">Start</button>
+        </div>
+
+        <div class="pb-4 text-secondary">
+            Nombre de cycles: <span class="cycle">1</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- Zone d'information  -->
+<section>
+    <div class="container text-justify text-white" id="infos">
+        <hr>
+        <p>Plusieurs études ont montré que rester concentré tout au long de la journée sur plusieurs tâches, sans véritable pause, était contreproductif.</p>
+        <h5 class="text-white text-uppercase fw-light">Le principe du Pomodoro</h2>
+        <p>L'objectif est de rester concentré à 100% sur une seule et unique tâche pendant 25mn (appelé session).</p>
+        <p>Une courte pause sépare chaque session. Puis un break plus long intervient après plusieurs sessions. Bref, cette technique est très simple à utiliser : il suffit d'un minuteur et d'une discipline de fer ! Tout en étant rudement efficace.</p>
+        <p>Ce type de timer peut également être appliqué aux séances de HIIT (High Intensity Interval Training). J'ai d'ailleurs choisi des périodes de temps pour l'utiliser ce sens :)</p>
+    </div>
+</section>
+
+<script src="pomodoro_js.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
