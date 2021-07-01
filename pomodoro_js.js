@@ -16,7 +16,7 @@ let cycle               = document.querySelector('.cycle');
 // Création des variables 
     // Variables d'initialisation 
     let workingPeriodInSeconds  = 30;
-    let pausePeriodInSeconds    = 15;
+    let pausePeriodInSeconds    = 5;
     let breakPeriodInSeconds    = 60;
     let cycleNumber = 1;
     let pause = true;
